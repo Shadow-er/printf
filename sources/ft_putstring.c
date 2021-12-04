@@ -1,4 +1,4 @@
-int ft_putstr(char * str)
+int ft_putstring(char * str)
 {
     int sum;
 

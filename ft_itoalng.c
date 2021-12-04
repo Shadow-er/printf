@@ -61,7 +61,7 @@ static void	reverse(char *c, unsigned long j)
 	}
 }
 
-char	*ft_itoa(unsigned long num, int base)
+char	*ft_itoalng(unsigned long num, int base)
 {
 	unsigned long	j;
 	char			*c;

@@ -10,8 +10,8 @@ int ft_point(unsigned long pt)
         sum += ft_putstring("0x0");
         return (sum);        
     }
-    p = ft_itoau(pt,16);
-    p = ft_putlowstr(p);
+    p = ft_itoalng(pt,16);
+    p = ft_strlow(p);
     sum += ft_putstring("0x");
     sum += ft_putstring(p);
     free(p);

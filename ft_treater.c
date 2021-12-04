@@ -28,6 +28,6 @@ int ft_treater(char c, va_list args)
     else if (c == 'X')
         sum += ft_puthexa(va_arg(args, unsigned int),0);
     else if (c == '%')
-        sum += ft_putperc();
+        sum += ft_putperc(void);
     return (sum);
 }
