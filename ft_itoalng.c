@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoalng.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 18:23:01 by mlakhssa          #+#    #+#             */
+/*   Updated: 2021/12/04 18:32:00 by mlakhssa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
 #include<stdlib.h>
 
 static unsigned long	uinr(unsigned long nbr)
@@ -47,7 +60,7 @@ static void	reverse(char *c, unsigned long j)
 {
 	unsigned long		start;
 	unsigned long		end;
-	char	temp;
+	char				temp;
 
 	start = 0;
 	end = j;

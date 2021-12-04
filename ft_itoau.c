@@ -1,4 +1,16 @@
-#include<stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoau.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 18:23:19 by mlakhssa          #+#    #+#             */
+/*   Updated: 2021/12/04 18:32:51 by mlakhssa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
 
 static unsigned int	uinr(unsigned int nbr)
 {
@@ -46,8 +58,8 @@ static void	ft_putnbr(unsigned int n, char *str, unsigned int *i, int base)
 static void	reverse(char *c, unsigned int j)
 {
 	unsigned int	start;
-	unsigned int		end;
-	char	temp;
+	unsigned int	end;
+	char			temp;
 
 	start = 0;
 	end = j;

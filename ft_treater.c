@@ -1,4 +1,16 @@
-#include "printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_treater.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 18:23:59 by mlakhssa          #+#    #+#             */
+/*   Updated: 2021/12/04 18:24:39 by mlakhssa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int isIn_list(char * r)
 {
@@ -28,6 +40,6 @@ int ft_treater(char c, va_list args)
     else if (c == 'X')
         sum += ft_puthexa(va_arg(args, unsigned int),0);
     else if (c == '%')
-        sum += ft_putperc(void);
+        sum += ft_putperc();
     return (sum);
 }

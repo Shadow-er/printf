@@ -1,8 +1,22 @@
-int ft_treatchar(char c)
-{
-    int sum;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_treatchar.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 18:22:23 by mlakhssa          #+#    #+#             */
+/*   Updated: 2021/12/04 18:31:03 by mlakhssa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    sum = 0;
-    ft_puchar(c);
-    return (sum + 1);
+#include "ft_printf.h"
+
+int	ft_treatchar(char c)
+{
+	int	sum;
+
+	sum = 0;
+	ft_puchar(c);
+	return (sum + 1);
 }
