@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(MAKE) -C ./libft
 	cp libft/libft.a $(NAME)
-	ar crs $(NAME) $(OBJS)
+	ar cr $(NAME) $(OBJS)
 clean : 
 	$(MAKE) clean -C ./libft
 	rm -f ${OBJS} 

@@ -6,12 +6,11 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:23:01 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/05 11:34:58 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 11:46:40 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include<stdlib.h>
 
 static void	ft_putnbr(unsigned long n, char *str,
 unsigned long i, unsigned long base)
