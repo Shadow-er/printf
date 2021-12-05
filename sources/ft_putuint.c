@@ -6,7 +6,7 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:21:41 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 19:01:15 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 09:03:49 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ int	ft_putuint(unsigned int c)
 
 	sum = 0;
 	if (c == 0)
-		return (0);
+	{
+		ft_treatchar('0');
+		return (1);
+	}
 	d = ft_itoau(c, 10);
 	sum += ft_putstring(d);
 	free(d);

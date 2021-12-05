@@ -6,7 +6,7 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:20:49 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/05 08:49:15 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 09:49:05 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ int	ft_putint(int c)
 	int				sum;
 	unsigned int	i;
 	char			*d;
+	int				r;
 
 	sum = 0;
 	i = 0;
+	r = c;
 	if (c == 0)
-	{
-		ft_treatchar('0');
-		return (1);
-	}
+		return (ft_treatchar('0'));
 	if (c < 0)
 	{
 		ft_putstring("-");
@@ -32,7 +31,10 @@ int	ft_putint(int c)
 		i = c;
 		sum++;
 	}
-	d = ft_itoa(c);
+	if (r <= -2147483648)
+		d = ft_itoau(i, 10);
+	else
+		d = ft_itoa(c);
 	sum += ft_putstring(d);
 	free(d);
 	return (sum);

@@ -6,39 +6,26 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:23:19 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 19:05:01 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 11:40:33 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static unsigned int	uinr(unsigned int nbr)
-{
-	unsigned int	ui;
-
-	if (nbr < 0)
-		nbr *= -1;
-	ui = (unsigned int)nbr;
-	return (ui);
-}
-
 static unsigned int	l_mal(unsigned int nbr, int base)
 {
 	unsigned int	j;
 	unsigned int	ui;
-	int				ne;
+	unsigned int	ue;
 
 	j = 0;
-	if (nbr < 0)
-		ne = 1;
-	ui = uinr(nbr);
+	ui = nbr;
+	ue = (unsigned int)base;
 	while (ui != 0)
 	{
 		j++;
-		ui /= base;
+		ui /= ue;
 	}
-	if (ne == 1)
-		j++;
 	return (j);
 }
 
@@ -70,8 +57,8 @@ static void	reverse(char *c, unsigned int j)
 		temp = c[start];
 		c[start] = c[end];
 		c[end] = temp;
-		start ++;
-		end --;
+		start++;
+		end--;
 	}
 }
 
@@ -84,19 +71,14 @@ char	*ft_itoau(unsigned int num, int base)
 	j = 0;
 	if (num == 0)
 	{
-		c = (char *)malloc(sizeof(char) * 2);
-		c[0] = '0';
-		c[1] = '\0';
+		c = ft_strdup("0");
 		return (c);
 	}
 	ui = l_mal(num, base);
 	c = (char *)malloc(sizeof(char) * (ui + 1));
 	if (c == 0)
 		return (0);
-	ui = uinr(num);
-	ft_putnbr(ui, c, &j, base);
-	if (num < 0)
-		c[++j] = '-';
+	ft_putnbr(num, c, &j, base);
 	c[++j] = '\0';
 	reverse(c, j - 1);
 	return (c);
