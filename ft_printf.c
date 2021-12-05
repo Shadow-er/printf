@@ -6,7 +6,7 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:23:43 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:37:11 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 08:48:46 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int	ft_treat(const char *r, va_list args)
 			if (isIn_list(r[i]))
 				sum += ft_treater(r[i], args);
 			else if (r[i])
-				sum += ft_puchar(r[i]);
+				sum += ft_treatchar(r[i]);
 		}
 		else if (r[i] != '%')
-			sum += ft_puchar(r[i]);
+			sum += ft_treatchar(r[i]);
 		i++;
 	}
 	return (sum);
@@ -51,6 +51,12 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	sum += ft_treat(r, args);
 	va_end(args);
-	free(r);
+	free((char *)r);
 	return (sum);
+}
+#include <stdio.h>
+int main()
+{
+	printf("%d\n", 0);
+	ft_printf("%d",0);
 }

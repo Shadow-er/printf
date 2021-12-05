@@ -6,17 +6,17 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:23:59 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:24:39 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 07:40:31 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int isIn_list(char * r)
+int isIn_list(char r)
 {
-    if (*r == 'c' || *r == 's' || *r == 'p' || *r == 'd' || *r == 'i')
+    if (r == 'c' || r == 's' || r == 'p' || r == 'd' || r == 'i')
         return (1);
-    if (*r == 'u' || *r == 'x' || *r == 'X' || *r == '%')
+    if (r == 'u' || r == 'x' || r == 'X' || r == '%')
         return (1);
     return (0);
 }
@@ -26,7 +26,7 @@ int ft_treater(char c, va_list args)
 
     sum = 0;
     if(c == 'c')
-        sum += ft_treatchar(va_arg(args,char));
+        sum += ft_treatchar(va_arg(args, int));
     else if (c == 's')
         sum += ft_treatstr(va_arg(args,char *));
     else if (c == 'p')

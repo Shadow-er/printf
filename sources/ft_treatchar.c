@@ -6,17 +6,17 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:22:23 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:31:03 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:03:03 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_treatchar(char c)
 {
 	int	sum;
 
 	sum = 0;
-	ft_puchar(c);
+	ft_putchar_fd(c, 1);
 	return (sum + 1);
 }

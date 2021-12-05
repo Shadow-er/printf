@@ -6,7 +6,7 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:23:01 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:32:00 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:04:24 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,16 @@ static unsigned long	l_mal(unsigned long nbr, int base)
 static void	ft_putnbr(unsigned long n, char *str, unsigned long *i, int base)
 {
 	unsigned long	k;
+	unsigned long	r;
 
 	k = *i;
-	if (n >= base)
+	r = (unsigned long)base;
+	if (n >= r)
 	{
 		*i = *i + 1;
-		ft_putnbr(n / base, str, i, base);
+		ft_putnbr(n / r, str, i, base);
 	}
-	str[k] = (n % base) + '0';
+	str[k] = (n % r) + '0';
 }
 
 static void	reverse(char *c, unsigned long j)

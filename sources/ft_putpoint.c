@@ -6,13 +6,13 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:21:13 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:28:04 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/05 08:26:55 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_point(unsigned long pt)
+int	ft_putpoint(unsigned long pt)
 {
 	char	*p;
 	int		sum;

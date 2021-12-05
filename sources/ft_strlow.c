@@ -6,11 +6,11 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:22:11 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:30:44 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:01:18 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_strlow(char *str)
 {

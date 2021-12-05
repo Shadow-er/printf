@@ -6,11 +6,11 @@
 /*   By: mlakhssa <mlakhssa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 18:21:41 by mlakhssa          #+#    #+#             */
-/*   Updated: 2021/12/04 18:30:09 by mlakhssa         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:01:15 by mlakhssa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putuint(unsigned int c)
 {
